@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Blogs Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Blog Site</a>
+      <span class="navbar-text" id="userWelcome"></span>
+        <button class="btn btn-danger" id="logoutButton">Logout</button>
+        
+       
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Right column for the form -->
+        <div class="col-md-3">
+            <label for="category-filter">Filter by Category:</label>
+            <select class="form-select mb-3" id="category-filter">
+                <option value="All">All</option>
+                <option value="All_blogs">All blogs</option>
+            </select>
+            
+            <form id="add-blog-form">
+                <h3>Add a New Blog Post</h3>
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" id="title" name="title" required type="text">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="content">Content</label>
+                    <textarea class="form-control" id="content" name="content" required rows="4"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="categories">Categories (comma-separated)</label>
+                    <input class="form-control" id="categories" name="categories" type="text">
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Left column for the list of blogs -->
+        <div class="col-md-9" id="blog-list">
+          <!-- Blog Posts will appear here -->
+      </div>
+</div>
+
+<div class="modal fade" id="editBlogModal" tabindex="-1" aria-labelledby="editBlogModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editBlogModalLabel">Edit Blog Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Edit Blog Post Form -->
+        <form id="editBlogForm">
+          <div class="mb-3">
+            <label for="editTitle" class="form-label">Title</label>
+            <input type="text" class="form-control" id="editTitle" name="editTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="editContent" class="form-label">Content</label>
+            <textarea class="form-control" id="editContent" name="editContent" required rows="4"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="editCategories" class="form-label">Categories (comma-separated)</label>
+            <input type="text" class="form-control" id="editCategories" name="editCategories">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="updateBlogButton">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/userBlogs.js"></script>
+</body>
+</html>

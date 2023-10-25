@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Login and Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <style>
+        body {
+            background-color: #212529;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            border-bottom: 1px solid #007bff;
+            text-align: center;
+        }
+
+        .navbar-brand {
+            color: #ffffff;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .login-card {
+            background-color: #343a40;
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        .login-card-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-btn {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+
+        .register-card {
+            background-color: #495057;
+            border: 1px solid #666;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        .register-card-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .register-btn {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Blog Site</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <!-- Login Form -->
+                <div class="login-card">
+                    <h2 class="login-card-title">Already Have an Account!!</h2>
+                    <h3 class="login-card-title">Login</h3>
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="loginUsername">Username</label>
+                            <input class="form-control" id="loginUsername" placeholder="username" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="loginPassword">Password</label>
+                            <input class="form-control" id="loginPassword" placeholder="password" type="password">
+                        </div>
+                        <button class="btn login-btn" id="loginButton" type="submit">Login</button>
+                    </form>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="register-card mt-4">
+                    <h2 class="register-card-title">Don't have an account!! Register</h2>
+                    <h2 class="register-card-title">Register</h2>
+                    <form id="regForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="regUsername">Username</label>
+                            <input class="form-control" id="regUsername" placeholder="Select a username" type="text">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="regPassword">Password</label>
+                            <input class="form-control" id="regPassword" placeholder="Generate a password" type="password">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="regEmail">Email</label>
+                            <input class="form-control" id="regEmail" placeholder="Provide your email address" type="email">
+                        </div>
+                        <button class="btn register-btn" id="registerButton" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
